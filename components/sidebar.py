@@ -10,7 +10,35 @@ from components import modal_novo_processo, modal_novo_advogado, modal_advogados
 from app import app
 
 # ========= Layout ========= #
-layout = dbc.Container([])
+layout = dbc.Container([
+    modal_novo_processo.layout,
+    modal_novo_advogado.layout,
+    modal_advogados.layout,
+    
+    dbc.Container([
+        dbc.Row([
+            dbc.Col([
+                html.H1(
+                    'FRANÇA', style=({'color': 'yellow'})
+                )
+            ])
+        ]),
+        dbc.Row([
+            dbc.Col([
+                html.H1(
+                    'ASSOCIATE', style=({'color': 'white'})
+                )
+            ])
+        ]),
+    ], style={'padding-top': '50px', 'margin-bottom': '100%'}, className='text-center'),
+    html.Hr(),
+    dbc.Row([
+        dbc.Col([
+            
+        ])
+    ])
+    
+])
     
 
 
