@@ -19,7 +19,7 @@ layout = dbc.Container([
         dbc.Row([
             dbc.Col([
                 html.H1(
-                    'FRANÇA', style=({'color': 'yellow'})
+                    'PATRICK', style=({'color': 'yellow'})
                 )
             ])
         ]),
@@ -34,11 +34,17 @@ layout = dbc.Container([
     html.Hr(),
     dbc.Row([
         dbc.Col([
-            
+            dbc.Nav([
+                dbc.NavItem(dbc.NavLink([html.I(className='fa fa-home dbc'), '\tINÍCIO'], href='/home', active=True, style={'text-align': 'left'})),
+                html.Br(),
+                dbc.NavItem(dbc.NavLink([html.I(className='fa fa-plus-circle dbc'), '\tPROCESSOS'], id='process_button', href='/home', active=True, style={'text-align': 'left'})),
+                html.Br(),
+                dbc.NavItem(dbc.NavLink([html.I(className='fa fa-user-plus dbc'), '\tADVOGADOS'],id='lawyers_button', href='/home', active=True, style={'text-align': 'left'})),
+            ], vertical="lg", pills=True, fill=True)
         ])
     ])
     
-])
+], style={'height': '100vh', 'padding': '0px', 'position': 'sticky', 'top': 0, 'background-color': '#232423'})
     
 
 
