@@ -25,7 +25,14 @@ app.layout = dbc.Container([
     dbc.Row([                                                     # Cria uma linha (Row) usando o sistema de grid do Bootstrap
         dbc.Col([                                                # Cria uma coluna (Col) dentro da linha; útil para layout responsivo
             sidebar.layout                                       # Adiciona o layout da barra lateral dentro dessa coluna
-        ], md=2)                                                 # Define o tamanho da coluna para ocupar 2/12 das colunas do grid em telas médias ou maiores
+        ], md=2, style={'padding': '0px'}),                       # Define o tamanho da coluna para ocupar 2/12 das colunas do grid em telas médias ou maiores
+        dbc.Col([  # Cria uma coluna (Col) ocupando 10/12 do grid em telas médias ou maiores
+            dbc.Container(  # Cria um container do Bootstrap dentro da coluna para abrigar o conteúdo da página
+                id='page-content',  # Define o id do container, que será utilizado para atualizar dinamicamente o conteúdo exibido
+                fluid=True,  # Torna o container responsivo (largura total do seu elemento pai)
+                style={'jeight': '100%', 'width': '100%', 'pedding-left': '14px'}  # Define o estilo do container (jeight e pedding-left provavelmente são erros de digitação)
+            )
+        ], md=10, style={'padding': '0px'})  # Define o estilo da coluna (remove o padding lateral)
     ])                                                           # Fecha a declaração da linha
 
 ], fluid=True)
