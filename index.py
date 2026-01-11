@@ -31,7 +31,7 @@ app.layout = dbc.Container([
             dbc.Container(  # Cria um container do Bootstrap dentro da coluna para abrigar o conteúdo da página
                 id='page-content',  # Define o id do container, que será utilizado para atualizar dinamicamente o conteúdo exibido
                 fluid=True,  # Torna o container responsivo (largura total do seu elemento pai)
-                style={'jeight': '100%', 'width': '100%', 'pedding-left': '14px'}  # Define o estilo do container (jeight e pedding-left provavelmente são erros de digitação)
+                style={'height': '100%', 'width': '100%', 'padding-left': '14px'}  # Define o estilo do container (jeight e pedding-left provavelmente são erros de digitação)
             )
         ], md=10, style={'padding': '0px'})  # Define o estilo da coluna (remove o padding lateral)
     ])                                                           # Fecha a declaração da linha
