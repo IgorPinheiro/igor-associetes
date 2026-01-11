@@ -41,6 +41,19 @@ app.layout = dbc.Container([
 
 # ======= Callbacks ======== #
 # URL callback to update page content
+# Este callback atualiza o conteúdo da página com base na URL atual
+@app.callback(                                            # Define um callback do Dash
+    Output('page-content', 'children'),                   # Saída: atualiza a propriedade 'children' do componente com id 'page-content'
+    Input('url', 'pathname')                              # Entrada: escuta alterações na propriedade 'pathname' do componente com id 'url'
+)
+def render_page_content(pathname):                        # Função que determina o que mostrar com base no path da URL
+    # Verifica qual página foi solicitada pela URL
+    if pathname == '/home' or pathname == '/':           # Se o path for '/home' ou '/', ou seja, página inicial
+        return home.layout                                # Retorna o layout da página inicial
+    # Adicione outros caminhos de página conforme necessário
+    return dbc.Container([
+        html.H1(f"404: Página: {pathname} não encontrada"),
+        ])         # Se o path não corresponder, exibe mensagem de erro 404
 
 
 # Dcc.Store back to file
