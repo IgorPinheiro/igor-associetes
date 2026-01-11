@@ -18,7 +18,7 @@ app.layout = dbc.Container([
     dcc.Location(id='url'),                        # Componente que gerencia a URL para navegação de páginas no Dash
     dcc.Store(id='store_intermediate', data={}),   # Armazena dados intermediários a serem compartilhados entre callbacks
     dcc.Store(id='store_adv', data={}),            # Armazena dados avançados para uso em callbacks ou páginas diferentes
-    dcc.Store(id='sotore_proc', data={}),          # (Possível erro de digitação no nome) Armazena dados processados ao longo do app
+    dcc.Store(id='store_proc', data={}),          # (Possível erro de digitação no nome) Armazena dados processados ao longo do app
     html.Div(id='div_phantom'),  # Esta div serve como placeholder invisível para armazenar estados ou servir de destino para callbacks sem exibir conteúdo na interface.
     
 
@@ -58,7 +58,18 @@ def render_page_content(pathname):                        # Função que determi
 
 
 # Dcc.Store back to file
-
+@app.callback(
+    Output('div_phantom', 'children'),
+    Input('store_adv', 'data'),
+    Input('store_proc', 'data'),
+)
+def update_file(adv_data, proc_data):
+    df_adv_aux = pd.DataFrame(adv_data)
+    df_proc_aux = pd.DataFrame(proc_data)
+    
+    # Fill with sql query.
+    
+    return []
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=3000, debug=True)
