@@ -15,6 +15,10 @@ from components import home, sidebar
 # =========  Layout  =========== #
 app.layout = dbc.Container([
     # Store e Location 
+    dcc.Location(id='url'),
+    dcc.Store(id='store_intermediate', data={}),
+    dcc.Store(id='store_adv', data={}),
+    dcc.Store(id='sotore_proc', data={}),
     
 
     # Layout
