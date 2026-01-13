@@ -30,7 +30,7 @@ layout = dbc.Container([
                 )
             ])
         ]),
-    ], style={'padding-top': '50px', 'margin-bottom': '100%'}, className='text-center'),
+    ], style={'padding-top': '50px', 'margin-bottom': '45%'}, className='text-center'),
     html.Hr(),
     dbc.Row([
         dbc.Col([
