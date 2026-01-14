@@ -30,8 +30,9 @@ layout = dbc.Container([
                 )
             ])
         ]),
-    ], style={'padding-top': '50px', 'margin-bottom': '45%'}, className='text-center'),
+    ], style={'padding-top': '50px', 'margin-bottom': '30%'}, className='text-center'),
     html.Hr(),
+    
     dbc.Row([
         dbc.Col([
             dbc.Nav([
@@ -50,6 +51,7 @@ layout = dbc.Container([
 
 # ======= Callbacks ======== #
 # Abrir Modal New Lawyer
+
 
 
 # Abrir Modal Lawyers
