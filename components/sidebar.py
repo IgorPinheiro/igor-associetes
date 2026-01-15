@@ -52,7 +52,7 @@ layout = dbc.Container([
 # ======= Callbacks ======== #
 # Abrir Modal New Lawyer
 @app.callback(
-    Output('modal_lawyers', 'is_open'),
+    Output('modal_lawyer', 'is_open'),
     Input('lawyers_button', 'n_clicks'),
     Input('quit_button', 'n_clicks'),
     Input('lawyer-new', 'n_clicks'),

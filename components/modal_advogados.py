@@ -12,7 +12,7 @@ from components import home
 
 # ======== Layout ========= #
 layout = dbc.Modal([
-    dbc.ModalHeader(dbc.ModalTitle('Cadastar Novo Advogado')),
+    dbc.ModalHeader(dbc.ModalTitle('Cadastrar Novo Advogado')),
     dbc.ModalBody([
         dbc.Row([
             dbc.Col([
@@ -22,7 +22,7 @@ layout = dbc.Modal([
     ]),
     dbc.ModalFooter([
         dbc.Button('Sair', id='quit_button', color='danger'),
-        dbc.Button('Novo', id='lawyer-new', color='secundary')
+        dbc.Button('Novo', id='lawyer-new', color='success')
     ])
     
 ], id='modal_lawyer', size='lg', is_open=False)
@@ -41,7 +41,7 @@ def table(data):
     df = df.fillna('-')
     
     return dash_table.DataTable(
-                id='datatable-lawyers',
+                id='datatable',
                 columns=[{"name": col, "id": col} for col in df.columns],
                 data=df.to_dict('records'),
                 page_size=10,
