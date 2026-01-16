@@ -34,10 +34,12 @@ layout = dbc.Modal([
     dbc.ModalFooter([
         dbc.Button('Cancelar', id='cancel_button_new_lawyer', color='danger'),
         dbc.Button('Salvar', id='save_button_new_lawyer', color='success'),
-    ])
-], id='modal_new_lawyer', size='lg', is_open=False)
+    ]), 
+], id='modal_new_lawyers', size='lg', is_open=False)
+
 
 
 
 # ======= Callbacks ======== #
 # Callback para adicionar novos advogados
+
