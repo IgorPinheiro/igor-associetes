@@ -22,7 +22,7 @@ layout = dbc.Modal([
     ]),
     dbc.ModalFooter([
         dbc.Button('Sair', id='quit_button', color='danger'),
-        dbc.Button('Novo', id='lawyer-new', color='success')
+        dbc.Button('Novo', id='lawyer_new', color='success')
     ])
     
 ], id='modal_lawyer', size='lg', is_open=False)
